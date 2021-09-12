@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body text="green" tbgcolor="orange">
+
+  <div class="container" class="bg-dark">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style = "background: url(background3.jpg)">
+        <h1 style="color:rgb(255, 0, 191)"> Belly Button Biodiversity Dashboard</h1>
+        <p style="color:rgb(221, 117, 20)">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-2" style="background-color:powderblue">
+        <div class="well" style="background-color:rgb(192, 233, 13)" >
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary" style="background-color:rgb(192, 233, 13)">
+          <div class="panel-heading" style="background-color:rgb(192, 233, 13)">
+            <h3 class="panel-title" style="color:rgb(12, 179, 201)">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body" ></div>
+        </div>
+      </div>
+      <div class="col-md-5" >
+        <div id="bar"></div>
+        <p> Bar Gragh contains data of the Otuid's and Otulabels and sample values data</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p> Gauge Graph is calculated using Wfreq</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p>Bubble chart represents the data of Bellybutton research data</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+  
+
+
+</body>
+
+</html>
